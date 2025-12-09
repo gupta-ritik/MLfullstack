@@ -4,6 +4,15 @@ Version: 0.1.0
 Summary: A machine learning project for network security
 Author: Ritik Gupta
 Author-email: ritiknitc@gmail.com
+Requires-Dist: numpy
+Requires-Dist: python-dotenv
+Requires-Dist: pandas
+Requires-Dist: pymongo
+Requires-Dist: certifi
+Requires-Dist: pymongo[srv]
+Requires-Dist: dill
+Requires-Dist: pyaml
 Dynamic: author
 Dynamic: author-email
+Dynamic: requires-dist
 Dynamic: summary

@@ -6,4 +6,3 @@ certifi
 pymongo[srv]
 dill
 pyaml
--e .

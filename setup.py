@@ -13,7 +13,7 @@ def get_requirements() -> List[str]:
             lines = file.readlines()
             for line in lines:
                 requirement=line.strip()
-                if requirement and not requirement != '-e .':
+                if requirement and  requirement != '-e .':
                     requirement_list.append(requirement)
     except FileNotFoundError:
         print(f"Warning: requirements.txt not found. No dependencies will be installed.")
