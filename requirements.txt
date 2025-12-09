@@ -3,4 +3,5 @@ python-dotenv
 pandas
 pymongo
 certifi
+pymongo[srv]
 -e .
