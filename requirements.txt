@@ -2,3 +2,5 @@ numpy
 python-dotenv
 pandas
 pymongo
+certifi
+-e .

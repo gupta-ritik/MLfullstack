@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: networksecurity
+Version: 0.1.0
+Summary: A machine learning project for network security
+Author: Ritik Gupta
+Author-email: ritiknitc@gmail.com
+Dynamic: author
+Dynamic: author-email
+Dynamic: summary
