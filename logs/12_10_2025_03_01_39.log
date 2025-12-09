@@ -1,0 +1,10 @@
+[ 2025-12-10 03:01:40,505 ] 11 root - INFO - Starting Training Pipeline Configuration
+[ 2025-12-10 03:01:40,505 ] 22 root - INFO - Initiating Data Ingestion Process
+[ 2025-12-10 03:01:40,506 ] 98 root - INFO - Starting Data Ingestion Pipeline...
+[ 2025-12-10 03:01:40,506 ] 31 root - INFO - Connecting to MongoDB...
+[ 2025-12-10 03:01:47,502 ] 40 root - INFO - Fetched 22110 rows from MongoDB database=RitikDB, collection=NetworkData
+[ 2025-12-10 03:01:47,590 ] 66 root - INFO - Feature store saved at: Artifacts\12_10_2025_03_01_39\data_ingestion\feature_store\phisingData.csv
+[ 2025-12-10 03:01:47,590 ] 75 root - INFO - Splitting dataset with shape: (22110, 31)
+[ 2025-12-10 03:01:47,672 ] 91 root - INFO - Train-test split completed successfully.
+[ 2025-12-10 03:01:47,672 ] 109 root - INFO - Data Ingestion Completed Successfully.
+[ 2025-12-10 03:01:47,673 ] 30 root - INFO - Data Ingestion Completed Successfully
