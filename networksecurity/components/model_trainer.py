@@ -56,7 +56,7 @@ class ModelTrainer:
         best_model = model_report[best_model_name]["best_model"]
 
         logging.info(f"Best model selected: {best_model_name}")
-
+        save_object("final_model/best_model.pkl", best_model)
         # Compute train and test metrics
         y_train_pred = best_model.predict(X_train)
         y_test_pred = best_model.predict(X_test)

@@ -7,6 +7,7 @@ networksecurity.egg-info/dependency_links.txt
 networksecurity.egg-info/requires.txt
 networksecurity.egg-info/top_level.txt
 networksecurity/cloud/__init__.py
+networksecurity/cloud/s3_syncer.py
 networksecurity/components/__init__.py
 networksecurity/components/data_ingestion.py
 networksecurity/components/data_transformation.py
@@ -22,6 +23,8 @@ networksecurity/exception/exception.py
 networksecurity/logging/__init__.py
 networksecurity/logging/logger.py
 networksecurity/pipeline/__init__.py
+networksecurity/pipeline/batch_prediction.py
+networksecurity/pipeline/training_pipeline.py
 networksecurity/utils/__init__.py
 networksecurity/utils/main_utils/__init__.py
 networksecurity/utils/main_utils/utils.py
