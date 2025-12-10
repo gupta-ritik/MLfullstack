@@ -95,41 +95,30 @@ def load_object(file_path: str) -> object:
 # ============================
 
 def evaluate_models(X_train, y_train, X_test, y_test, models, param_grid):
-    """
-    Trains multiple ML models using GridSearchCV and 
-    returns F1-score for each model.
-    """
-
     try:
+        from sklearn.model_selection import GridSearchCV
+        from sklearn.metrics import f1_score
+
         report = {}
 
         for model_name, model in models.items():
+
             params = param_grid.get(model_name, {})
 
-            logging.info(f"Training model: {model_name}")
-
-            gs = GridSearchCV(model, params, cv=3, scoring="f1", n_jobs=-1)
+            gs = GridSearchCV(model, params, cv=3, verbose=0)
             gs.fit(X_train, y_train)
 
             best_model = gs.best_estimator_
+            best_model.fit(X_train, y_train)
 
-            # Predictions
-            y_train_pred = best_model.predict(X_train)
-            y_test_pred = best_model.predict(X_test)
+            y_pred = best_model.predict(X_test)
 
-            # Metrics
-            f1 = f1_score(y_test, y_test_pred, average="binary")
-            precision = precision_score(y_test, y_test_pred, average="binary")
-            recall = recall_score(y_test, y_test_pred, average="binary")
+            score = f1_score(y_test, y_pred, zero_division=0)
 
             report[model_name] = {
-                "f1_score": f1,
-                "precision": precision,
-                "recall": recall,
-                "best_params": gs.best_params_
+                "best_model": best_model,
+                "f1_score": score
             }
-
-            logging.info(f"{model_name} → F1={f1}, Precision={precision}, Recall={recall}")
 
         return report
 
